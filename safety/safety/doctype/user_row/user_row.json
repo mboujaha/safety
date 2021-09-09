@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2021-09-09 14:56:55.356334",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_txt"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_txt",
+   "fieldtype": "Link",
+   "label": "user",
+   "options": "User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-09 14:56:55.356334",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "User Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

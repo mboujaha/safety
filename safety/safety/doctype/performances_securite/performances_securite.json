@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "creation": "2021-09-08 09:53:20.658845",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "info_section",
+  "dt_info_txt",
+  "site_txt",
+  "column_break_3",
+  "dt_y_txt",
+  "site_data_sec_brk",
+  "tht_txt",
+  "at_data_sec_brk",
+  "taa_txt",
+  "tnjp_txt",
+  "column_break_6",
+  "asaa_txt",
+  "ars_sec_brk",
+  "prac_txt",
+  "column_break_10",
+  "asd_txt",
+  "tftg_sec_brk",
+  "tfa_txt",
+  "column_break_19",
+  "tga_txt"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_data_sec_brk",
+   "fieldtype": "Section Break",
+   "label": "Donn\u00e9es Site"
+  },
+  {
+   "fieldname": "tht_txt",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": " Total des heures travaill\u00e9es",
+   "reqd": 1
+  },
+  {
+   "fieldname": "at_data_sec_brk",
+   "fieldtype": "Section Break",
+   "label": "Donn\u00e9es AT accident avec arr\u00eat de travail"
+  },
+  {
+   "fieldname": "taa_txt",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total des Accidents avec arr\u00eat ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tnjp_txt",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Nombre de journ\u00e9es perdues",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asaa_txt",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Accident sans Arr\u00eat avec soins m\u00e9dicaux",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ars_sec_brk",
+   "fieldtype": "Section Break",
+   "label": "Remont\u00e9es des alertes securit\u00e9"
+  },
+  {
+   "description": "sans pr\u00e9judice corporel, ni dommage mat\u00e9riel",
+   "fieldname": "prac_txt",
+   "fieldtype": "Int",
+   "label": "Presque accident",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asd_txt",
+   "fieldtype": "Int",
+   "label": "Les actes dangereux et les situations dangereuses d\u00e9t\u00e9ct\u00e9es",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dt_info_txt",
+   "fieldtype": "Select",
+   "label": "Mois",
+   "options": "janv.\nf\u00e9vr.\nmars\navr.\nmai\njuin\njuill.\nao\u00fbt\nsept.\noct.\nnov.\nd\u00e9c."
+  },
+  {
+   "fieldname": "info_section",
+   "fieldtype": "Section Break",
+   "label": "Info."
+  },
+  {
+   "fieldname": "dt_y_txt",
+   "fieldtype": "Select",
+   "label": "Ann\u00e9e",
+   "options": "2021"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_txt",
+   "fieldtype": "Data",
+   "label": "Site"
+  },
+  {
+   "fieldname": "tftg_sec_brk",
+   "fieldtype": "Section Break",
+   "label": "Taux de fr\u00e9quence & Taux de gravit\u00e9"
+  },
+  {
+   "fieldname": "tfa_txt",
+   "fieldtype": "Data",
+   "label": "Taux de fr\u00e9quence d'accident"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tga_txt",
+   "fieldtype": "Data",
+   "label": "Taux de gravit\u00e9 d'accident"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-09 16:02:13.463271",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Performances Securite",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Performance moderator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

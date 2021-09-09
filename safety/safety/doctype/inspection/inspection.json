@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "autoname": "format:{######} : {type} - {category}",
+ "creation": "2021-07-01 16:22:46.997166",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_section",
+  "date",
+  "type",
+  "tp_company",
+  "column_break_2",
+  "category",
+  "subject",
+  "lieu_section",
+  "company_type",
+  "department_name",
+  "column_break_4",
+  "company_name",
+  "media_section",
+  "media",
+  "commentaire_section",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Inspection type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type === 'Acte dangereux'",
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Personnel en acte dangereux",
+   "options": "Employment Type"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date d\u2019observation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Cat\u00e9gorie",
+   "options": "Inspection Categorie",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Table",
+   "label": "Photos/Videos",
+   "options": "Multi media attach"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "inspection_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "commentaire_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "media_section",
+   "fieldtype": "Section Break",
+   "label": "Media"
+  },
+  {
+   "depends_on": "eval:doc.subject === 'Sous-traitants'",
+   "fieldname": "tp_company",
+   "fieldtype": "Link",
+   "label": "Soci\u00e9t\u00e9 ",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "lieu_section",
+   "fieldtype": "Section Break",
+   "label": "Lieu"
+  },
+  {
+   "fieldname": "company_type",
+   "fieldtype": "Link",
+   "label": "O\u00f9 ?",
+   "options": "Company type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.company_type !== undefined",
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.company_type !== undefined",
+   "fieldname": "department_name",
+   "fieldtype": "Link",
+   "label": "D\u00e9partement",
+   "options": "Department"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-20 11:01:29.294163",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}
