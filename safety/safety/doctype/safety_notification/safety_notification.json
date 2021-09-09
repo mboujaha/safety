@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "creation": "2021-07-12 12:50:12.767294",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "section_break_accident",
+  "type_accident",
+  "column_break_4",
+  "cares_performed",
+  "section_break_incident",
+  "type_incident",
+  "column_break_6",
+  "arret_prev",
+  "section_break_8",
+  "date_event",
+  "column_break_11",
+  "date_obs",
+  "media_section",
+  "media",
+  "section_break_commentaires",
+  "commentaires"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cat\u00e9gorie",
+   "options": "Notification Categorie",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "collapsible_depends_on": "eval: doc.category === 'Accident'",
+   "fieldname": "section_break_accident",
+   "fieldtype": "Section Break",
+   "label": "Accident"
+  },
+  {
+   "depends_on": "eval: doc.category === 'Accident'",
+   "fieldname": "type_accident",
+   "fieldtype": "Link",
+   "label": "Type d'accident",
+   "options": "Accident type"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.type_accident === 'Accident Mineur'\neval: doc.category === 'Accident'",
+   "fieldname": "cares_performed",
+   "fieldtype": "Select",
+   "label": "Soins r\u00e9alis\u00e9s ?",
+   "options": "Oui\nNon"
+  },
+  {
+   "collapsible_depends_on": "eval: doc.category === 'Incident'",
+   "fieldname": "section_break_incident",
+   "fieldtype": "Section Break",
+   "label": "Incident"
+  },
+  {
+   "depends_on": "eval: doc.category === 'Incident'",
+   "fieldname": "type_incident",
+   "fieldtype": "Link",
+   "label": "Type incident",
+   "options": "Incident type"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_incident === 'Incident avec arr\u00eat d\u2019activit\u00e9'\neval: doc.category === 'Incident'",
+   "fieldname": "arret_prev",
+   "fieldtype": "Link",
+   "label": "Dur\u00e9e Pr\u00e9visionnelle d\u2019arr\u00eat d\u2019activit\u00e9",
+   "options": "Duree prev d arret d activite"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_event",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date estimative de l\u2019\u00e9v\u00e9nement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_obs",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date d\u2019observation de l\u2019\u00e9v\u00e9nement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "media_section",
+   "fieldtype": "Section Break",
+   "label": "Media"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Table",
+   "label": "Photos/Videos",
+   "options": "Multi media attach"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_commentaires",
+   "fieldtype": "Section Break",
+   "label": "Commentaires"
+  },
+  {
+   "fieldname": "commentaires",
+   "fieldtype": "Text Editor",
+   "label": "Commentaires"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-09 22:26:06.432698",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Safety Notification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

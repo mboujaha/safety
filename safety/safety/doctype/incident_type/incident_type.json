@@ -1,32 +1,33 @@
 {
  "actions": [],
- "creation": "2021-09-09 14:57:08.276593",
+ "autoname": "field:incident_name",
+ "creation": "2021-07-12 12:32:13.769660",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "app_name",
-  "users"
+  "incident_name",
+  "level"
  ],
  "fields": [
   {
-   "fieldname": "users",
-   "fieldtype": "Table MultiSelect",
-   "label": "users",
-   "options": "User Row"
+   "fieldname": "incident_name",
+   "fieldtype": "Data",
+   "label": "Libell\u00e9",
+   "unique": 1
   },
   {
-   "fieldname": "app_name",
-   "fieldtype": "Data",
-   "label": "app"
+   "fieldname": "level",
+   "fieldtype": "Int",
+   "label": "Level"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-09 22:25:49.641312",
+ "modified": "2021-09-09 22:26:16.488331",
  "modified_by": "Administrator",
  "module": "Safety",
- "name": "Safety moderator",
+ "name": "Incident type",
  "owner": "Administrator",
  "permissions": [
   {

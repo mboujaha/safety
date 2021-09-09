@@ -1,32 +1,39 @@
 {
  "actions": [],
- "creation": "2021-09-09 14:57:08.276593",
+ "autoname": "field:categorie_name",
+ "creation": "2021-07-12 12:14:36.460318",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "app_name",
-  "users"
+  "categorie_name",
+  "icn",
+  "abbr"
  ],
  "fields": [
   {
-   "fieldname": "users",
-   "fieldtype": "Table MultiSelect",
-   "label": "users",
-   "options": "User Row"
+   "fieldname": "categorie_name",
+   "fieldtype": "Data",
+   "label": "Libell\u00e9",
+   "unique": 1
   },
   {
-   "fieldname": "app_name",
+   "fieldname": "icn",
+   "fieldtype": "Attach",
+   "label": "icon"
+  },
+  {
+   "fieldname": "abbr",
    "fieldtype": "Data",
-   "label": "app"
+   "label": "Abbr"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-09 22:25:49.641312",
+ "modified": "2021-09-09 22:26:24.155978",
  "modified_by": "Administrator",
  "module": "Safety",
- "name": "Safety moderator",
+ "name": "Notification Categorie",
  "owner": "Administrator",
  "permissions": [
   {
