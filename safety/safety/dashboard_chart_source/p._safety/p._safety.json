@@ -1,0 +1,13 @@
+{
+ "creation": "2021-09-10 09:22:32.010900",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-09-10 09:22:32.010900",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "P. safety",
+ "owner": "Administrator",
+ "source_name": "P. safety",
+ "timeseries": 1
+}

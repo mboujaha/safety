@@ -12,16 +12,30 @@
   "column_break_3",
   "dt_y_txt",
   "site_data_sec_brk",
+  "nht_txt",
   "tht_txt",
+  "nbrtr_txt",
+  "nhtoe_txt",
   "at_data_sec_brk",
-  "taa_txt",
+  "aaaem_txt",
+  "aaaop_txt",
+  "accident_avec_fatalit\u00e9_mort",
   "tnjp_txt",
   "column_break_6",
+  "njpem_txt",
+  "njop_txt",
+  "taa_txt",
+  "rs_sec_brk",
   "asaa_txt",
   "ars_sec_brk",
   "prac_txt",
+  "nba_txt",
+  "nbrforsen_txt",
+  "nbrsms_txt",
   "column_break_10",
-  "asd_txt",
+  "ninsp_txt",
+  "tclo_txt",
+  "nbrreun_txt",
   "tftg_sec_brk",
   "tfa_txt",
   "column_break_19",
@@ -49,15 +63,13 @@
    "fieldname": "taa_txt",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Total des Accidents avec arr\u00eat ",
-   "reqd": 1
+   "label": "Total des Accidents avec arr\u00eat "
   },
   {
    "fieldname": "tnjp_txt",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Total Nombre de journ\u00e9es perdues",
-   "reqd": 1
+   "label": "Total Nombre de journ\u00e9es perdues"
   },
   {
    "fieldname": "asaa_txt",
@@ -76,12 +88,6 @@
    "fieldname": "prac_txt",
    "fieldtype": "Int",
    "label": "Presque accident",
-   "reqd": 1
-  },
-  {
-   "fieldname": "asd_txt",
-   "fieldtype": "Int",
-   "label": "Les actes dangereux et les situations dangereuses d\u00e9t\u00e9ct\u00e9es",
    "reqd": 1
   },
   {
@@ -125,7 +131,7 @@
   },
   {
    "fieldname": "tfa_txt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Taux de fr\u00e9quence d'accident"
   },
   {
@@ -134,13 +140,100 @@
   },
   {
    "fieldname": "tga_txt",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Taux de gravit\u00e9 d'accident"
+  },
+  {
+   "fieldname": "rs_sec_brk",
+   "fieldtype": "Section Break",
+   "label": "Remont\u00e9es des soins"
+  },
+  {
+   "fieldname": "accident_avec_fatalit\u00e9_mort",
+   "fieldtype": "Int",
+   "label": "Accident avec fatalit\u00e9 (Mort)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nht_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des heures travaill\u00e9es employ\u00e9s",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nbrtr_txt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nhtoe_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des heures travaill\u00e9es occasionnels + Sous-traitants",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aaaem_txt",
+   "fieldtype": "Int",
+   "label": " Accident avec arr\u00eat de travail employ\u00e9s",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aaaop_txt",
+   "fieldtype": "Int",
+   "label": "Accident avec arr\u00eat de travail occasionnels + sous traitants",
+   "reqd": 1
+  },
+  {
+   "fieldname": "njpem_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des journ\u00e9es perdues employ\u00e9s",
+   "reqd": 1
+  },
+  {
+   "fieldname": "njop_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des journ\u00e9es perdues occasionnels + sous traitants",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nba_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des actes dangereux et des situations dangereuses d\u00e9tect\u00e9es (SD)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ninsp_txt",
+   "fieldtype": "Int",
+   "label": "Nombre des inspections et des visites de s\u00e9curit\u00e9 r\u00e9alis\u00e9es",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tclo_txt",
+   "fieldtype": "Int",
+   "label": "Taux de cl\u00f4ture des actions correctives et pr\u00e9ventives des SD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nbrforsen_txt",
+   "fieldtype": "Int",
+   "label": "Nombre de formation et de sensibilisation s\u00e9curit\u00e9",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nbrsms_txt",
+   "fieldtype": "Int",
+   "label": "Conformit\u00e9 du (SMS) Syst\u00e8me de Management de la S\u00e9curit\u00e9",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nbrreun_txt",
+   "fieldtype": "Int",
+   "label": "Nombre de r\u00e9union s\u00e9curit\u00e9 ",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-09 22:25:42.148411",
+ "modified": "2021-09-12 12:30:57.577200",
  "modified_by": "Administrator",
  "module": "Safety",
  "name": "Performances Securite",
