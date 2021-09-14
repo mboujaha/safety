@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "format:{dt_y_txt}-{dt_info_txt} : {site_txt}",
  "creation": "2021-09-08 09:53:20.658845",
  "doctype": "DocType",
  "document_type": "Document",
@@ -11,6 +12,7 @@
   "site_txt",
   "column_break_3",
   "dt_y_txt",
+  "date_entry",
   "site_data_sec_brk",
   "nht_txt",
   "tht_txt",
@@ -229,11 +231,16 @@
    "fieldtype": "Int",
    "label": "Nombre de r\u00e9union s\u00e9curit\u00e9 ",
    "reqd": 1
+  },
+  {
+   "fieldname": "date_entry",
+   "fieldtype": "Date",
+   "label": "date_entry"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-12 12:30:57.577200",
+ "modified": "2021-09-13 16:04:22.719666",
  "modified_by": "Administrator",
  "module": "Safety",
  "name": "Performances Securite",
