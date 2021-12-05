@@ -1,0 +1,46 @@
+{
+ "cards": [
+  {
+   "card": "Nbr d\u00e9claration en cours"
+  },
+  {
+   "card": "Nbr d\u00e9claration Planifier"
+  },
+  {
+   "card": "Nbr d\u00e9claration En retard"
+  },
+  {
+   "card": "Nbr d\u00e9claration Cl\u00f4tur\u00e9"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Actes dangereux main",
+   "width": "Half"
+  },
+  {
+   "chart": "Situation dangereuses",
+   "width": "Half"
+  },
+  {
+   "chart": "Actes dangereux par type d\u2019acte",
+   "width": "Half"
+  },
+  {
+   "chart": "Situations dangereuses par critici\u00e9",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-09-29 15:17:38.555245",
+ "dashboard_name": "BeSafe",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-10-28 10:10:47.755797",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "BeSafe",
+ "owner": "Administrator"
+}

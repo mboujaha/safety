@@ -1,0 +1,13 @@
+{
+ "creation": "2021-09-29 15:31:43.143865",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-09-29 15:31:43.143865",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Actes dangereux",
+ "owner": "Administrator",
+ "source_name": "Actes dangereux",
+ "timeseries": 1
+}

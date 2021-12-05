@@ -1,0 +1,40 @@
+{
+ "chart_name": "Evolution de la pand\u00e9mie",
+ "chart_type": "Report",
+ "creation": "2021-10-04 10:55:32.246797",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2021-10-04 11:13:35.445843",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Evolution de la pand\u00e9mie",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Evolution de la pand\u00e9mie",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "site_txt",
+ "y_axis": [
+  {
+   "color": "#ff0000",
+   "y_field": "covid_positi"
+  },
+  {
+   "color": "#29CD42",
+   "y_field": "covid_gueri"
+  },
+  {
+   "color": "#449CF0",
+   "y_field": "covid_en_cours"
+  }
+ ]
+}

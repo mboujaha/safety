@@ -1,36 +1,46 @@
 {
  "actions": [],
- "autoname": "format:{######} : {type} - {category}",
+ "allow_rename": 1,
+ "autoname": "format:{owner}-{company_type}-{date}",
  "creation": "2021-07-01 16:22:46.997166",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "inspection_section",
+  "img",
+  "media",
+  "section_break_3",
+  "planned_date",
   "date",
+  "company_type",
+  "company_name",
   "type",
   "tp_company",
-  "column_break_2",
   "category",
   "subject",
-  "lieu_section",
-  "company_type",
-  "department_name",
-  "column_break_4",
-  "company_name",
-  "media_section",
-  "media",
-  "commentaire_section",
-  "comment"
+  "nom",
+  "immat",
+  "nbr_pers",
+  "attach_image",
+  "comment",
+  "reported_by",
+  "closing_date",
+  "section_break_19",
+  "attach_image_2",
+  "img_after",
+  "media_after",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "type",
    "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
    "options": "Inspection type",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.type === 'Acte dangereux'",
@@ -48,8 +58,9 @@
   },
   {
    "fieldname": "comment",
-   "fieldtype": "Text Editor",
-   "label": "Description"
+   "fieldtype": "Long Text",
+   "label": "Description",
+   "max_height": "100px"
   },
   {
    "fieldname": "category",
@@ -57,37 +68,15 @@
    "in_list_view": 1,
    "in_preview": 1,
    "label": "Cat\u00e9gorie",
+   "mandatory_depends_on": "eval:doc.type === 'Acte dangereux'",
    "options": "Inspection Categorie",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
+   "depends_on": "eval: doc.type !== 'Acte dangereux'",
    "fieldname": "media",
-   "fieldtype": "Table",
-   "label": "Photos/Videos",
-   "options": "Multi media attach"
-  },
-  {
-   "fieldname": "column_break_2",
-   "fieldtype": "Column Break"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "inspection_section",
-   "fieldtype": "Section Break",
-   "label": "Inspection"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "commentaire_section",
-   "fieldtype": "Section Break",
-   "label": "Description"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "media_section",
-   "fieldtype": "Section Break",
-   "label": "Media"
+   "fieldtype": "Button",
+   "label": "Prise photo / vid\u00e9o"
   },
   {
    "depends_on": "eval:doc.subject === 'Sous-traitants'",
@@ -97,43 +86,127 @@
    "options": "Supplier"
   },
   {
-   "fieldname": "lieu_section",
-   "fieldtype": "Section Break",
-   "label": "Lieu"
-  },
-  {
    "fieldname": "company_type",
    "fieldtype": "Link",
-   "label": "O\u00f9 ?",
-   "options": "Company type",
+   "label": "Site",
+   "options": "Site",
    "reqd": 1
   },
   {
    "depends_on": "eval: doc.company_type !== undefined",
    "fieldname": "company_name",
    "fieldtype": "Link",
-   "label": "Site",
-   "options": "Company",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Site",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
+   "default": "/files/370090_camera_photo_photos_picture_image_icon (1).svg",
+   "depends_on": "eval: doc.type !== 'Acte dangereux'",
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "attach image",
+   "max_height": "150px"
   },
   {
-   "depends_on": "eval: doc.company_type !== undefined",
-   "fieldname": "department_name",
+   "depends_on": "eval: doc.type !== 'Acte dangereux'",
+   "fieldname": "img",
+   "fieldtype": "Image",
+   "label": "Image",
+   "max_height": "120px",
+   "options": "attach_image",
+   "width": "10px"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.type === 'Acte dangereux'",
+   "fieldname": "nbr_pers",
+   "fieldtype": "Int",
+   "label": "Nombre de personnes"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Acte dangereux'",
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "label": "Nom",
+   "mandatory_depends_on": "eval:doc.type === 'Acte dangereux'"
+  },
+  {
+   "depends_on": "eval:in_list(['Collaborateur'], doc.subject)",
+   "fieldname": "immat",
+   "fieldtype": "Data",
+   "label": "Immatricule"
+  },
+  {
+   "fieldname": "reported_by",
    "fieldtype": "Link",
-   "label": "D\u00e9partement",
-   "options": "Department"
+   "hidden": 1,
+   "label": "Auditeur",
+   "options": "User",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "closing_date",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Date de cl\u00f4ture"
+  },
+  {
+   "depends_on": "eval: doc.workflow_state === 'Planifier'",
+   "fieldname": "planned_date",
+   "fieldtype": "Datetime",
+   "label": "Date planifier"
+  },
+  {
+   "depends_on": "eval: (doc.workflow_state !== 'En cours' && doc.type === 'Situation dangereuse')",
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Photo apr\u00e8s r\u00e9solution"
+  },
+  {
+   "fieldname": "img_after",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "attach_image_2"
+  },
+  {
+   "fieldname": "media_after",
+   "fieldtype": "Button",
+   "label": "Prise photo / vid\u00e9o"
+  },
+  {
+   "default": "/files/370090_camera_photo_photos_picture_image_icon (1).svg",
+   "depends_on": "eval: doc.type !== 'Acte dangereux'",
+   "fieldname": "attach_image_2",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "attach image"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inspection",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-09 22:26:00.091947",
+ "modified": "2021-12-03 13:20:03.311113",
  "modified_by": "Administrator",
  "module": "Safety",
  "name": "Inspection",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -145,6 +218,34 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Safety manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Safety manager",
+   "select": 1,
+   "set_user_permissions": 1,
    "share": 1,
    "write": 1
   }

@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "info_section",
+  "site_select",
   "dt_info_txt",
   "site_txt",
   "column_break_3",
@@ -38,6 +39,11 @@
   "ninsp_txt",
   "tclo_txt",
   "nbrreun_txt",
+  "pand\u00e9mie_covid_19_section",
+  "covid_positi",
+  "covid_gueri",
+  "column_break_39",
+  "covid_en_cours",
   "tftg_sec_brk",
   "tfa_txt",
   "column_break_19",
@@ -236,14 +242,48 @@
    "fieldname": "date_entry",
    "fieldtype": "Date",
    "label": "date_entry"
+  },
+  {
+   "fieldname": "pand\u00e9mie_covid_19_section",
+   "fieldtype": "Section Break",
+   "label": "Pand\u00e9mie covid 19"
+  },
+  {
+   "fieldname": "covid_positi",
+   "fieldtype": "Int",
+   "label": "Collaborateurs confirm\u00e9 positifs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "covid_gueri",
+   "fieldtype": "Int",
+   "label": "Collaborateurs gu\u00e9ris",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "covid_en_cours",
+   "fieldtype": "Int",
+   "label": "Collaborateurs en cours de traitement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site_select",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Site"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-09-13 16:04:22.719666",
+ "modified": "2021-10-05 16:17:51.237027",
  "modified_by": "Administrator",
  "module": "Safety",
  "name": "Performances Securite",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "format:{######} : {type} - {category}",
+ "creation": "2021-09-21 23:46:14.431328",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "img",
+  "media",
+  "section_break_3",
+  "date",
+  "company_type",
+  "company_name",
+  "nbr_pers",
+  "subject",
+  "attach_image",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "img",
+   "fieldtype": "Image",
+   "label": "Image",
+   "max_height": "120px",
+   "options": "attach_image",
+   "width": "10px"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Button",
+   "label": "Photo / Vid\u00e9o de la zone "
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date d\u2019observation",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.type === 'Acte dangereux'",
+   "fieldname": "nbr_pers",
+   "fieldtype": "Int",
+   "label": "Nombre des victimes "
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "D\u00e9g\u00e2ts corporels",
+   "options": "Degats corporels"
+  },
+  {
+   "fieldname": "company_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Site",
+   "options": "Site",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.company_type !== undefined",
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Zone",
+   "options": "Site",
+   "reqd": 1
+  },
+  {
+   "default": "/files/370090_camera_photo_photos_picture_image_icon (1).svg",
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "attach image",
+   "max_height": "150px"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-22 14:47:44.296754",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "accident notification",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "tht_txt",
+ "creation": "2021-09-30 13:17:14.812660",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Performances Securite",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "function": "Sum",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Total des heures travaill\u00e9es",
+ "modified": "2021-09-30 13:17:14.812660",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Total des heures travaill\u00e9es",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

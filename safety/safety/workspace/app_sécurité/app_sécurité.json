@@ -1,0 +1,128 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "content": "[{ \"type\": \"shortcut\", \"data\": { \"shortcut_name\": \"INSPECTION\", \"col\": 4 } },{\"type\": \"shortcut\",\"data\": { \"shortcut_name\": \"NOTIFICATION D\u2019ACCIDENT\", \"col\": 4 }},{\"type\": \"shortcut\",\"data\": { \"shortcut_name\": \"NOTIFICATION D\u2019INCIDENT\", \"col\": 4 }},{ \"type\": \"shortcut\", \"data\": { \"shortcut_name\": \"Rapports\", \"col\": 4 } },{ \"type\": \"shortcut\", \"data\": { \"shortcut_name\": \"Reporting des performances securit\u00e9s\", \"col\": 4 } },{ \"type\": \"shortcut\", \"data\": { \"shortcut_name\": \"Statistiques\", \"col\": 4 } },{\"type\": \"shortcut\",\"data\": { \"shortcut_name\": \"R\u00e8gles de s\u00e9curit\u00e9\", \"col\": 4 }}]",
+ "creation": "2021-09-22 01:11:21.167419",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "quality",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "App S\u00e9curit\u00e9",
+ "links": [],
+ "modified": "2021-11-19 12:05:27.849859",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "App S\u00e9curit\u00e9",
+ "owner": "Administrator",
+ "parent_page": "",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "public": 1,
+ "roles": [
+  {
+   "role": "Safety manager"
+  },
+  {
+   "role": "Safety user"
+  }
+ ],
+ "sequence_id": 1,
+ "shortcuts": [
+  {
+   "bg_color": "#E2F1D9",
+   "color": "Grey",
+   "doc_view": "New",
+   "icon_color": "#2C3758",
+   "icon_height": "110px",
+   "icon_img": "/files/Group 6.png",
+   "icon_size": "5rem",
+   "icon_width": "5 rem",
+   "label": "INSPECTION",
+   "link_to": "Inspection",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#F8CBAD",
+   "color": "Grey",
+   "doc_view": "New",
+   "icon_color": "#2C3758",
+   "icon_height": "100px",
+   "icon_img": "/files/Group-7.png",
+   "icon_size": "5rem",
+   "icon_width": "5 rem",
+   "label": "NOTIFICATION D\u2019ACCIDENT",
+   "link_to": "accident notification",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#FEE497",
+   "color": "Grey",
+   "doc_view": "New",
+   "icon_color": "#2C3758",
+   "icon_height": "100px",
+   "icon_img": "/files/Layer_2.png",
+   "icon_size": "5rem",
+   "icon_width": "110px",
+   "label": "NOTIFICATION D\u2019INCIDENT",
+   "link_to": "incident notification",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#e1f1f1",
+   "color": "Grey",
+   "doc_view": "List",
+   "icon_color": "#2C3758",
+   "icon_height": "110px",
+   "icon_img": "/files/report-icon-13315.png",
+   "icon_size": "5rem",
+   "icon_width": "5 rem",
+   "label": "Rapports",
+   "link_to": "Inspection",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#E2F0D9",
+   "color": "Grey",
+   "doc_view": "New",
+   "icon_color": "#2C3758",
+   "icon_height": "110px",
+   "icon_img": "/files/2046636.png",
+   "icon_size": "5rem",
+   "icon_width": "5 rem",
+   "label": "R\u00e8gles de s\u00e9curit\u00e9",
+   "link_to": "rulesec",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#dbe6ed",
+   "doc_view": "New",
+   "icon_color": "#1E3A8D",
+   "icon_height": "100px",
+   "icon_img": "/files/report.png",
+   "icon_size": "100px",
+   "icon_width": "5 rem",
+   "label": "Reporting des performances securit\u00e9s",
+   "link_to": "Performances Securite",
+   "type": "DocType"
+  },
+  {
+   "bg_color": "#e8def9",
+   "doc_view": "",
+   "icon_color": "#2C3758",
+   "icon_height": "100px",
+   "icon_img": "/files/statistics.png",
+   "icon_size": "5rem",
+   "icon_width": "5 rem",
+   "label": "Statistiques",
+   "link_to": "BeSafe",
+   "type": "Dashboard"
+  }
+ ],
+ "title": "Menu principal"
+}

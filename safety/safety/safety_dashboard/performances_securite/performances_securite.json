@@ -1,0 +1,42 @@
+{
+ "cards": [
+  {
+   "card": "Total des heures travaill\u00e9es-1"
+  },
+  {
+   "card": "Accident avec fatalit\u00e9"
+  },
+  {
+   "card": "Total des accidents avec arr\u00eat"
+  },
+  {
+   "card": "Accident sans arr\u00eat avec soins m\u00e9dicaux"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Evolution des actes et des situations dangereuses",
+   "width": "Half"
+  },
+  {
+   "chart": "Donn\u00e9es AT accident avec arr\u00eat de travail",
+   "width": "Half"
+  },
+  {
+   "chart": "Evolution de la pand\u00e9mie",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-09-30 13:07:13.461171",
+ "dashboard_name": "Performances Securite",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-10-04 11:27:50.387325",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Performances Securite",
+ "owner": "Administrator"
+}

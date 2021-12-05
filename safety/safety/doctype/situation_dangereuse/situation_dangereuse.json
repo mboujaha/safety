@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{######} - {title}",
+ "creation": "2021-10-05 21:52:45.020443",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "station",
+  "rement_par",
+  "priority",
+  "project",
+  "description",
+  "start_date",
+  "end_date",
+  "real_end_date",
+  "site"
+ ],
+ "fields": [
+  {
+   "fieldname": "station",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Station",
+   "options": "Stations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rement_par",
+   "fieldtype": "Link",
+   "label": "Remont\u00e9e par",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priorit\u00e9",
+   "options": "High\nNormal\nLow"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Projet"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Date de d\u00e9but"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "Date de fin estim\u00e9e"
+  },
+  {
+   "depends_on": "eval: doc.workflow_state !== 'En cours'",
+   "fieldname": "real_end_date",
+   "fieldtype": "Datetime",
+   "label": "Date de r\u00e9alisation r\u00e9el"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Titre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-07 22:33:44.484572",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Situation dangereuse",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

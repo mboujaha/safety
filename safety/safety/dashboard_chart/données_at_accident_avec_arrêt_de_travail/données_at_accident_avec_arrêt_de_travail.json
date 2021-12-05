@@ -1,0 +1,44 @@
+{
+ "chart_name": "Donn\u00e9es AT accident avec arr\u00eat de travail",
+ "chart_type": "Report",
+ "creation": "2021-10-04 11:26:59.833082",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2021-10-04 17:01:35.654903",
+ "modified_by": "Administrator",
+ "module": "Safety",
+ "name": "Donn\u00e9es AT accident avec arr\u00eat de travail",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Donn\u00e9es AT accident avec arr\u00eat de travail",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "site_txt",
+ "y_axis": [
+  {
+   "color": "#ff0000",
+   "y_field": "accident_avec_fatalit\u00e9_mort"
+  },
+  {
+   "color": "#4463F0",
+   "y_field": "aaaem_txt"
+  },
+  {
+   "color": "#363636",
+   "y_field": "aaaop_txt"
+  },
+  {
+   "color": "#761ACB",
+   "y_field": "taa_txt"
+  }
+ ]
+}
